@@ -1,17 +1,12 @@
-function log(...params: any[]): void {
-  console.log(...params)
+function logWithFileLine(message: string): void {
+  console.log(message);
 }
 
 function hello(name: string) {
-  // have to log the entry manually
-  // Is it possible to log it automatically? Or just doing some general setup?
-  // It can get:
-  //  1. the function name
-  //  2. the params names and values
-  // Just like generating the following line manually
-  log('> hello', { name });
-  
-  console.log(`Hello, ${name}`);
+  logWithFileLine(`will say hello to ${name}`);
+  //             ^
+  // is it possible to add the information of "the current file and line" where 'logWithFileLine' is called
+  // e.g. So it will actually print "[hello.ts:6] will say hello to typescript"?
 }
 
 hello('typescript');

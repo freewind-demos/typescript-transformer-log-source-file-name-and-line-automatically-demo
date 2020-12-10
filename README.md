@@ -1,7 +1,9 @@
-TypeScript Transformer Log Function Entry Automatically Demo
+TypeScript Transformer Log Source File Name and Line Automatically Demo
 =============================================================
 
-能否利用typescript的transformer在AST层面做一些事情，让我们以一种简单的方式来自动log一个函数的入口和参数
+我们在log时有个痛点，输出信息时无法方便附带其被调用时所在文件和行信息，导致log多的时候难以快速定位。
+
+是否可以利用typescript的AST transformer功能，在调用某个log函数时，自动把其所在的文件路径和行数以某种形式隐式传进去
 
 ```
 npm install
